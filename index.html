@@ -1,243 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="sanket.css">
-    <!-- <link rel="stylesheet" href="Skills.css">
-    <link rel="stylesheet" href="About.css">
-    <link rel="stylesheet" href="Project.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sanket Mali's student portfolio showcasing web development skills and academic projects.">
+  <meta name="author" content="Sanket Mali">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Sanket Mali | Front-End Developer Portfolio</title>
+  <link rel="stylesheet" href="sanket.css">
+  <style>
+    /* Safe fallback styles; the existing sanket.css can still customize the page. */
+    :root { color-scheme: light; --ink: #172033; --muted: #526078; --accent: #087f8c; --surface: #f5f7fa; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: #fff; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+    a { color: var(--accent); }
+    a:focus-visible, button:focus-visible { outline: 3px solid #f59e0b; outline-offset: 3px; }
+    .site-header { background: #101827; color: #fff; }
+    .nav-wrap { max-width: 1100px; margin: auto; padding: 14px 22px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .brand { color: #fff; font-size: 1.15rem; font-weight: 700; text-decoration: none; }
+    .navlist { display: flex; gap: 18px; list-style: none; padding: 0; margin: 0; flex-wrap: wrap; }
+    .navlist a { color: #fff; text-decoration: none; }
+    .navlist a:hover { text-decoration: underline; }
+    main section { padding: 64px 22px; scroll-margin-top: 20px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .hero { background: linear-gradient(135deg, #edfafa, #f5f7fa); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(220px, .8fr); align-items: center; gap: 36px; }
+    .eyebrow { color: var(--accent); font-weight: 700; letter-spacing: .04em; }
+    h1, h2, h3 { line-height: 1.2; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.7rem); margin: .25em 0; }
+    h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-top: 0; }
+    .lead { color: var(--muted); font-size: 1.1rem; max-width: 650px; }
+    .button-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .button { display: inline-block; border: 2px solid var(--accent); border-radius: 8px; padding: 10px 16px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 700; }
+    .button.secondary { background: transparent; color: var(--accent); }
+    .profile-img { width: min(100%, 300px); aspect-ratio: 1; object-fit: cover; border-radius: 18px; display: block; margin: auto; background: #e2e8f0; }
+    .section-alt { background: var(--surface); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+    .card { background: #fff; border: 1px solid #dce3eb; border-radius: 12px; padding: 22px; min-width: 0; }
+    .skills-list { display: flex; gap: 10px; flex-wrap: wrap; padding: 0; list-style: none; }
+    .skills-list li { padding: 7px 12px; border-radius: 999px; background: #e5f5f5; color: #075b63; }
+    .project-video { display: block; width: 100%; max-height: 320px; background: #111827; border-radius: 8px; }
+    .note { border-left: 4px solid var(--accent); background: #edfafa; padding: 12px 16px; border-radius: 4px; }
+    footer { text-align: center; background: #101827; color: #e5e7eb; padding: 22px; }
+    footer p { margin: 4px 0; }
+    @media (max-width: 700px) { .hero-grid { grid-template-columns: 1fr; } .profile-img { width: min(70%, 240px); } main section { padding: 46px 18px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
 </head>
 <body>
-    <section id="sanket">
-        <div class="Portfolio-container">
+  <header class="site-header" id="home">
+    <div class="nav-wrap">
+      <a class="brand" href="#home">Sanket Mali</a>
+      <nav aria-label="Main navigation">
         <ul class="navlist">
-            <li><a href="#sanket" class="active">Home</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Project">Project</a></li>
-            <li><a href="#Services">Service</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
         </ul>
-
-        <div class="left-container">
-            <div class="icons">
-                <i class="fa-brands fa-facebook-f" ></i>
-                <i class="fa-brands fa-linkedin-in"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
-            </div>
-            <div class="content">
-                <p class="Intro">Hi! I am <span>Sanket Mali</span><p>
-                <h1>Front-end Developer</h1>
-                <p class="detail">I design and develop experiences that make people lives simpler through web. I work with Html5,CSS3,Bootstrap,JavaScript</p>
-                <div class="btn-container">
-                    <button>Hire Me</button>
-                    <button>View Project</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="right-container"></div>
-        <div class="design">
-            <div class="circle"></div>
-            <div class="circle"></div>
-        </div>
-
-        
+      </nav>
     </div>
-    </section>
-    <!-- Skills -->
-    <section id="Skills">
-        <div class="skills-container">
-            <h1 class="sub-title">
-                <br>
-                My<span><a href="Skills.html"></a>Skills </span>
-            </h1>
-            <section>
-                <div class="container-1" id="skills">
-                    <h2 class="heading">Technical Skills</h2>
-                    <div class="technical-bars">
-                        <div class="bar">
-                            <i class='bx bxl-html5'></i>
-                            <div class="info">
-                                <span>HTML</span>
-                            </div>
-                            <div class="progress-line html">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="bar">
-                            <i class='bx bxl-css3'></i>
-                            <div class="info">
-                                <span>CSS</span>
-                            </div>
-                            <div class="progress-line css">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="bar">
-                            <i class='bx bxl-javascript'></i>
-                            <div class="info">
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="progress-line javascript">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="bar">
-                            <i class='bx bxl-java'></i>
-                            <div class="info">
-                                <span>Java</span>
-                            </div>
-                            <div class="progress-line java">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="bar">
-                            <i class='bx bxl-react'></i>
-                            <div class="info">
-                                <span>React</span>
-                            </div>
-                            <div class="progress-line react">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">STUDENT PORTFOLIO</p>
+          <h1 id="intro-title">Hi, I'm Sanket Mali.</h1>
+          <h2>Front-End Developer</h2>
+          <p class="lead">I enjoy building clear, responsive web experiences with HTML, CSS, JavaScript and modern web tools.</p>
+          <p class="note"><strong>Independent learning portfolio:</strong> This website presents student work and demonstration projects. It is not affiliated with or endorsed by any third-party company or university featured in a project.</p>
+          <div class="button-row">
+            <a class="button" href="#about">About Me</a>
+            <a class="button secondary" href="#projects">View Projects</a>
+          </div>
         </div>
-    </section>
-
-    <!-- About  -->
-
-   <section id="About">
-    <div class="about-container">
-        <header>
-            <h1 class="main-title">
-                <a href="About.html"></a>About <span>Me</span>
-            </h1>
-        </header>
-        <section class="about-section">
-            <div class="profile">
-                <img src="sanket.jpeg" alt="Profile Picture" class="profile-img" style="max-width: 100%;">
-                <div class="profile-info">
-                    <h2>Hello, I'm Sanket</h2>
-                    <p>
-                        I am currently pursuing my last year of a Bachelor of Computer Application, and I have a passion for coding and technology. I have experience with various programming languages and frameworks, including HTML, CSS, JavaScript, and React. I enjoy working on projects that challenge my skills and help me grow as a developer.
-                    </p>
-                </div>
-            </div>
-            <div class="experience">
-                <h2>My Experience</h2>
-                <p>
-                    Over the years, I have worked on several projects including creating clones of popular websites, building web applications, and participating in coding competitions. My journey has allowed me to develop a strong foundation in frontend development and gain hands-on experience with modern technologies.
-                </p>
-            </div>
-        </section>
-    </div>
-   </section>
-   <!-- Project -->
-   <!-- <!DOCTYPE html>
-   <html lang="en">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>My Projects</title>
-       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-       <link rel="stylesheet" href="Project.css">
-   </head>
-   <body> -->
-    <section id="Project">
-        <div class="projects-container">
-            <header>
-                <h1 class="main-title">
-                    My <span><a href="Project.html"></a>Projects</span>
-                </h1>
-            </header>
-            <section class="projects-section">
-                <div class="project-card">
-                    <!-- <img src="project1.jpg" alt="Project 1" class="project-img"> -->
-                     <video src="A.mp4" controls width="360px" height="300vh"></video>
-                    <div class="project-info">
-                        <h2>Project 1</h2>
-                        <p>
-                            Description of Project 1. This project is a simplified version of the Amazon e-commerce platform, created using HTML and CSS. The clone features a clean, user-friendly interface that mimics the essential elements of the original site. Users can browse through product categories, view product details, and see a basic representation of shopping cart functionalities. The design focuses on responsiveness and aesthetics, ensuring a visually appealing experience across different devices. This project serves as an introduction to web development, showcasing the ability to replicate a well-known platform's layout and style with foundational web technologies.
- 
- 
-                        </p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <!-- <img src="project2.jpg" alt="Project 2" class="project-img"> -->
-                     <video src="Sandip.mp4" controls width="360px" height="300vh"></video>
-                    <div class="project-info">
-                        <h2>Project 2</h2>
-                        <p>
-                            Description of Project 2. This project involves the creation of a comprehensive web portal inspired by Sandip University, using HTML and CSS. It includes a Create Account Page where users can input their details to set up a new account, and a Sign-Up Page designed for user registration. The project also features a clone of the university’s website, including key pages such as the Home Page, which provides an overview of the university’s offerings; the About Page, detailing the institution’s history and mission; the Service Page, outlining the services provided; and the Contact Page, which includes contact information and a form for inquiries.
-                        </p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <!-- <img src="project3.jpg" alt="Project 3" class="project-img"> -->
-                     <video src="Calculator.mp4" controls width="360px" height="300vh"></video>
-                    <div class="project-info">
-                        <h2>Project 3</h2>
-                        <p>
-                            Description of Project 3. This project is a simple calculator application created using HTML and CSS. The calculator features a user-friendly interface that replicates the essential functions of a standard calculator, including addition, subtraction, multiplication, and division. The design emphasizes clarity and ease of use, with a clean layout and responsive design to ensure a consistent experience across various devices. This project demonstrates the ability to implement fundamental web development techniques and create a functional tool with a visually appealing interface.
-                        </p>
-                    </div>
-                </div>
-            </section>
+        <div>
+          <img class="profile-img" src="sanket.jpeg" alt="Portrait of Sanket Mali" loading="lazy">
         </div>
+      </div>
     </section>
-   <!-- </body> -->
-   <!-- </html> -->
-   
-    <!-- Service     -->
-    <section class="services" id="Services">
-        <div class="container">
-            <h2 class="section-title"> My <a href="Services.html"></a><span>Services</span></h2>
-            <div class="service-box">
-                <div class="service">
-                    <i class="service-icon">🌐</i>
-                    <h3>Web Development</h3>
-                    <p>Building responsive, user-friendly websites using the latest technologies.</p>
-                </div>
-                <div class="service">
-                    <i class="service-icon">📱</i>
-                    <h3>Mobile App Development</h3>
-                    <p>Designing mobile-first applications with a seamless user experience.</p>
-                </div>
-                <div class="service">
-                    <i class="service-icon">💻</i>
-                    <h3>Frontend Design</h3>
-                    <p>Creating visually stunning frontend designs with a focus on UX/UI.</p>
-                </div>
-                <div class="service">
-                    <i class="service-icon">⚙️</i>
-                    <h3>API Integration</h3>
-                    <p>Integrating robust APIs to bring dynamic features to your projects.</p>
-                </div>
-            </div>
+
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title">Skills</h2>
+        <p>Technologies I have studied and used in practice:</p>
+        <ul class="skills-list">
+          <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Java</li><li>React</li><li>Responsive Design</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-alt" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">About Me</h2>
+        <div class="card">
+          <p>I am pursuing the final year of a Bachelor of Computer Applications (BCA) and have a strong interest in coding and technology. I enjoy learning new tools, building practical projects, and improving my web development skills.</p>
+          <p>This portfolio is a personal educational project. Project descriptions are for demonstration and learning purposes.</p>
         </div>
+      </div>
     </section>
 
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title">Projects</h2>
+        <p class="lead">These videos demonstrate student projects. They are provided for viewing only; this portfolio does not ask visitors for account credentials or payment details.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>E-commerce UI Demo</h3>
+            <video class="project-video" controls preload="metadata" playsinline>
+              <source src="A.mp4" type="video/mp4">
+              Your browser does not support embedded video. <a href="A.mp4">Open the project video</a>.
+            </video>
+            <p>A front-end practice project that recreates common e-commerce layout patterns using HTML and CSS. It is an independent demonstration and is not an official Amazon website.</p>
+          </article>
+          <article class="card">
+            <h3>University Website UI Demo</h3>
+            <video class="project-video" controls preload="metadata" playsinline>
+              <source src="Sandip.mp4" type="video/mp4">
+              Your browser does not support embedded video. <a href="Sandip.mp4">Open the project video</a>.
+            </video>
+            <p>A university-inspired website layout created as a front-end learning exercise. It is not an official university website.</p>
+          </article>
+          <article class="card">
+            <h3>Calculator Demo</h3>
+            <video class="project-video" controls preload="metadata" playsinline>
+              <source src="Calci.mp4" type="video/mp4">
+              Your browser does not support embedded video. <a href="Calci.mp4">Open the project video</a>.
+            </video>
+            <p>A simple calculator interface project demonstrating basic layout and interaction concepts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-   <!-- <div class="body">
-    <div class="thank-you-container"></div>
-    <div class="thank-you-content">
-        <h1 class="thank-you-title">Thank You!</h1>
-        <p class="thank-you-message">
-            Your submission has been received. We appreciate your feedback and will get back to you shortly.
-        </p>
-        <a href="index.html" class="thank-you-btn">Back to Home</a>
-    </div>
-</div>
-   </div> -->
-</body>
-</html>
+    <section class="section-alt" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <h2 id="services-title">Areas of Interest</h2>
+        <div class="cards">
+          <article class="card"><h3>Web Development</h3><p>Responsive, accessible websites built with HTML, CSS and JavaScript.</p></article>
+          <article class="card"><h3>Mobile App Development</h3><p>Exploring mobile-first interfaces and user experience.</p></article>
+          <article class="card"><h3>Frontend Design</h3><p>Readable layouts and consistent UI components.</p></article>
+          <article class="card"><h3>API Integration</h3><p>Learning how web applications communicate with APIs.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <p>&copy; <span id="year">2026</span> Sanket Mali. Personal student portfolio.</p>
+    <p>Independent educational project; not affiliated with third-party brands or institutions shown in demonstrations.</p>
+  </footer>
 </body>
 </html>
